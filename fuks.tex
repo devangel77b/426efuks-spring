@@ -2,12 +2,12 @@
 
 \usepackage[hidelinks]{hyperref}
 
-\title{Title here: Internship at Commvault}
+\title{Recurring malware checker using MISP: Internship at Commvault}
 \author{%
 \IEEEauthorblockN{Ethan Fuks}\IEEEauthorblockA{Science \& Engineering\\Manalapan High School\\Englishtown, NJ\\\href{mailto:426efuks@frhsd.com}{426efuks@frhsd.com}}}
 \date{June 16, 2026}
 
-\newcommand{\keywords}{Commvault, malware, MISP, hash function, MalwareBazaar, abuse.ch, internship}
+\newcommand{\keywords}{Commvault, malware, Malware Information Sharing Platform, MISP, PyMISP, hash function, MalwareBazaar, abuse.ch, open source, internship}
 
 \usepackage{hyperref}
 \makeatletter
@@ -22,7 +22,7 @@ pdfkeywords={\keywords}}}
 \maketitle 
 
 \begin{abstract}
-During my internship at Commvault, I have created a tool that recurrently checks for malware in a user’s data by using MISP to obtain newly discovered malware hashes and comparing these against the user. A hash is a unique way of representing a piece of data by encoding it where small changes in the input create big unpredictable changes in the output. This creates a unique ``name'' for each file that can be used to share found malware and compare against it. MISP is a software that organizes and collects different feeds of data from various sources including \href{https://bazaar.abuse.ch}{MalwareBazaar} and \href{https://abuse.ch}{abuse.ch}, among many others. I created a dummy system to test with 100 files of randomized text and a list of hashes of these was created. Some were selected as malware and were checked against the list. I set up a local instance of MISP on a Commvault virtual machine that is perpetually running and able to be queried for found malware. This is then integrated into the dummy system to recurrently check for malware. I created a write-up for my process of setting up and using MISP for Commvault to use in the future. 
+During my internship at Commvault, I have created a tool that recurrently checks for malware in a user’s data by using the Malware Information Sharing Platform (MISP) to obtain newly discovered malware hashes and comparing these against the user. A hash is a unique way of representing a piece of data by encoding it where small changes in the input create big unpredictable changes in the output. This creates a unique signature for each file that can be used to share found malware and compare against it. MISP is an open source software that organizes and collects different feeds of data from various sources including \href{https://bazaar.abuse.ch}{MalwareBazaar} and \href{https://abuse.ch}{abuse.ch}, among many others. Commvault currently uses Google Threat Intelligence and my project evaluated MISP as a free, open source alternative. I created a dummy system to test with 100 files of randomized text and a list of hashes of these was created. Some were selected as malware and were checked against the list. I set up a local instance of MISP in Virtual Box that is perpetually running and able to be queried for found malware. PyMISP, a Python library to query MISP, is used to connect these parts together and recurringly check for malware. I created a write-up for my process of setting up and using MISP for Commvault to use in the future. 
 \end{abstract}
 
 \begin{IEEEkeywords}
